@@ -1,8 +1,8 @@
 import React from 'react';
 
-import profile from '../../images/header/profile.svg';
-import openMenu from '../../images/header/menuOpen.svg';
-import closeMenu from '../../images/header/menuClose.svg';
+import profile from '../../images/Header/profile.svg';
+import openMenu from '../../images/Header/menuOpen.svg';
+import closeMenu from '../../images/Header/menuClose.svg';
 
 import styles from './Header.module.scss';
 
