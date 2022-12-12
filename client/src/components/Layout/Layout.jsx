@@ -1,15 +1,17 @@
-import { Outlet } from 'react-router-dom';
 import React from 'react';
 
 import Header from '../Header/Header';
 
 import styles from './Layout.module.scss';
 
-const Layout = () => {
+const Layout = ({ children, height = '350px', bgImage }) => {
 	return (
-		<div className={styles.wrapper}>
+		<div
+			className={styles.wrapper}
+			style={{ height, backgroundImage: `url(${bgImage})` }}
+		>
 			<Header />
-			<Outlet />
+			{children}
 		</div>
 	);
 };

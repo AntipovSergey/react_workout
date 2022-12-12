@@ -1,0 +1,29 @@
+.wrapper {
+	width: 100%;
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 42px;
+		list-style: none;
+
+		li {
+			text-align: center;
+
+			h2 {
+				margin-bottom: 12px;
+				font-weight: 400;
+				font-size: 26px;
+				line-height: 130.19%;
+				color: #8a7474;
+				text-transform: capitalize;
+			}
+
+			span {
+				font-weight: 700;
+				font-size: 26px;
+				line-height: 30px;
+			}
+		}
+	}
+}

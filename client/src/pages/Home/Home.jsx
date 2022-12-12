@@ -1,17 +1,22 @@
 import React from 'react';
 
+import Layout from '../../components/Layout/Layout';
 import Button from '../../UI/Button/Button';
 import Counters from '../../UI/Counters/Counters';
 
 import styles from './Home.module.scss';
 
+import bgImage from '../../images/Home/home-bg.jpg';
+
 const Home = () => {
 	return (
-		<div className={styles.wrapper}>
-			<Button text='Name' style='main' callback={() => {}} />
-			<h1>Exercises for the shoulders</h1>
-			<Counters />
-		</div>
+		<Layout height='100vh' bgImage={bgImage}>
+			<div className={styles.wrapper}>
+				<Button text='Name' type='main' callback={() => {}} />
+				<h1>Exercises for the shoulders</h1>
+				<Counters />
+			</div>
+		</Layout>
 	);
 };
 
