@@ -13,15 +13,7 @@ const NewWorkout = ({ title }) => {
 	const handleSubmit = () => {};
 	return (
 		<>
-			<Layout
-				bgImage={bgImage}
-				bgShading={'transparent'}
-				borderRadius='0 0 20px 20px'
-			>
-				<div className={styles.upper}>
-					<h1>{title}</h1>
-				</div>
-			</Layout>
+			<Layout bgImage={bgImage} title='Create new workout' />
 			<div className={styles.wrapper}>
 				<form onSubmit={handleSubmit}>
 					<Field

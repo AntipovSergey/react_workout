@@ -12,10 +12,7 @@ function App() {
 					exact
 					element={<Home title='Exercises for the shoulders' />}
 				/>
-				<Route
-					path='/new-workout'
-					element={<NewWorkout title='Create new workout' />}
-				/>
+				<Route path='/new-workout' element={<NewWorkout />} />
 			</Routes>
 		</div>
 	);

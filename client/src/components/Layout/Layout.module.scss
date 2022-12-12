@@ -13,4 +13,19 @@
 
 	background-color: rgba($black, 0.6);
 	background-blend-mode: multiply;
+
+	&.otherPage {
+		border-radius: 0 0 20px 20px;
+		box-shadow: $bs-accent;
+		background-color: transparent;
+	}
+}
+
+.title {
+	margin-top: auto;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 130.19%;
+	text-transform: uppercase;
+	color: $white;
 }
