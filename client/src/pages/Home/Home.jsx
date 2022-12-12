@@ -8,12 +8,12 @@ import styles from './Home.module.scss';
 
 import bgImage from '../../images/Home/home-bg.jpg';
 
-const Home = () => {
+const Home = ({ title }) => {
 	return (
 		<Layout height='100vh' bgImage={bgImage}>
 			<div className={styles.wrapper}>
 				<Button text='Name' type='main' callback={() => {}} />
-				<h1>Exercises for the shoulders</h1>
+				<h1>{title}</h1>
 				<Counters />
 			</div>
 		</Layout>

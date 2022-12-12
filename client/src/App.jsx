@@ -1,15 +1,21 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
-
-import bgImage from './images/Home/home-bg.jpg';
+import NewWorkout from './pages/Profile/NewWorkout';
 
 function App() {
 	return (
 		<div>
 			<Routes>
-				<Route path='/' exact element={<Home />} />
+				<Route
+					path='/'
+					exact
+					element={<Home title='Exercises for the shoulders' />}
+				/>
+				<Route
+					path='/new-workout'
+					element={<NewWorkout title='Create new workout' />}
+				/>
 			</Routes>
 		</div>
 	);

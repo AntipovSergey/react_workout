@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.field {
+	margin-bottom: 38px;
+	padding: 14px 15px;
+	background-color: $purple;
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	color: $white;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+
+	&:focus {
+		border-color: rgba($accent, $alpha: 0.3);
+	}
+
+	&::placeholder {
+		color: #946e86;
+	}
+}

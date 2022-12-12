@@ -1,20 +1,33 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 import profile from '../../images/Header/profile.svg';
-import openMenu from '../../images/Header/menuOpen.svg';
-import closeMenu from '../../images/Header/menuClose.svg';
+import back from '../../images/Header/back.svg';
 
 import styles from './Header.module.scss';
+import Hamburger from './Hamburger/Hamburger';
 
 const Header = () => {
+	const { pathname } = useLocation();
+
 	return (
 		<div className={styles.wrapper}>
-			<button>
-				<img src={profile} alt='Profile' height={31} />
-			</button>
-			<button>
-				<img src={openMenu} alt='Open menu' height={31} />
-			</button>
+			{pathname === '/' ? (
+				<Link to='/new-workout'>
+					<button>
+						<img src={profile} alt='Profile' height={31} />
+					</button>
+				</Link>
+			) : (
+				<Link to='/'>
+					<button>
+						<img src={back} alt='Back' height={31} />
+					</button>
+				</Link>
+			)}
+			<Hamburger />
 		</div>
 	);
 };

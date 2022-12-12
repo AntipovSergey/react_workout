@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+.wrapper {
+	padding: 50px 90px;
+	text-align: center;
+}
+
+.upper {
+	margin-top: auto;
+	h1 {
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 130.19%;
+		text-transform: uppercase;
+		color: $white;
+	}
+}
