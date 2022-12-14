@@ -10,7 +10,7 @@ import bgImage from '../../images/Home/home-bg.jpg';
 
 const Home = ({ title }) => {
 	return (
-		<Layout height='100vh' bgImage={bgImage}>
+		<Layout bgImage={bgImage}>
 			<div className={styles.wrapper}>
 				<Button text='Name' type='main' callback={() => {}} />
 				<h1>{title}</h1>

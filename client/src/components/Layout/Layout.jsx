@@ -5,12 +5,11 @@ import Header from '../Header/Header';
 
 import styles from './Layout.module.scss';
 
-const Layout = ({ children, height = '350px', bgImage, title = '' }) => {
+const Layout = ({ children, bgImage, title = '' }) => {
 	return (
 		<div
 			className={cn(styles.wrapper, { [styles.otherPage]: title })}
 			style={{
-				height,
 				backgroundImage: `url(${bgImage})`,
 			}}
 		>
