@@ -18,28 +18,28 @@ const NewWorkout = () => {
 	return (
 		<>
 			<Layout bgImage={bgImage} title='Create new workout' />
-			<div className={`wrapper-inner-page`}>
+			<div className='wrapper-inner-page'>
 				<form onSubmit={handleSubmit}>
 					<Field
 						placeholder='Name'
 						value={name}
 						onChange={e => setName(e.target.value)}
 					/>
-					<div className={styles.select}>
-						<ReactSelect
-							classNamePrefix='select2-selection'
-							placeholder='Exercises'
-							title='Exercises'
-							options={[
-								{ value: 'Push-ups', label: 'Push-ups' },
-								{ value: 'Pull - ups', label: 'Pull-ups' },
-							]}
-							value={exercises}
-							onChange={setExercises}
-							isMulti={true}
-						/>
-						<Link to='../new-exercise'>Add new exercise</Link>
-					</div>
+					<Link className={styles.darkLink} to='../new-exercise'>
+						Add new exercise
+					</Link>
+					<ReactSelect
+						classNamePrefix='select2-selection'
+						placeholder='Exercises'
+						title='Exercises'
+						options={[
+							{ value: 'Push-ups', label: 'Push-ups' },
+							{ value: 'Pull - ups', label: 'Pull-ups' },
+						]}
+						value={exercises}
+						onChange={setExercises}
+						isMulti={true}
+					/>
 					<Button text='Create' />
 				</form>
 			</div>

@@ -15,7 +15,7 @@ const Header = () => {
 	return (
 		<div className={styles.wrapper}>
 			{pathname === '/' ? (
-				<Link to='/new-workout'>
+				<Link to='/profile'>
 					<button>
 						<img src={profile} alt='Profile' height={31} />
 					</button>

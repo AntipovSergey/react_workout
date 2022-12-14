@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+@import '../../styles/animations';
+
+.alert {
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #8bc24c;
+	color: $black;
+	animation: opacity 0.4s;
+
+	&.error {
+		background-color: #f6003c;
+		color: $white;
+	}
+
+	&.info {
+		background-color: #41b6e6;
+	}
+
+	&.warning {
+		background-color: #ffb549;
+	}
+}

@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.buttonsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	> div:last-child > button {
+		background-color: #614ad3;
+
+		&:hover {
+			background-color: #2d248a;
+		}
+	}
+}
