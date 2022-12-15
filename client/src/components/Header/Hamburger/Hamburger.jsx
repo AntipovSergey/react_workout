@@ -9,7 +9,6 @@ import styles from './Hamburger.module.scss';
 
 const Hamburger = () => {
 	const [menuOpened, setMenuOpened] = React.useState(false);
-	const nodeRef = React.useRef(null);
 
 	const handleOpenMenu = () => {
 		setMenuOpened(!menuOpened);

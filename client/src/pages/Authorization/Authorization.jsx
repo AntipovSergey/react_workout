@@ -1,10 +1,12 @@
 import React from 'react';
 import { useMutation } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 
 import Layout from '../../components/Layout/Layout';
 import Button from '../../UI/Button/Button';
 import Alert from '../../UI/Alert/Alert';
 import Loader from '../../UI/Loader';
+import { useAuth } from '../../hooks/useAuth';
 
 import bgImage from '../../images/Authorization/authorization-bg.jpg';
 import Field from '../../UI/Field/Field';
@@ -16,6 +18,8 @@ const Authorization = () => {
 	const [email, setEmail] = React.useState('');
 	const [password, setPassword] = React.useState('');
 	const [type, setType] = React.useState('Auth');
+	const navigate = useNavigate();
+	const { setIsAuth } = useAuth();
 
 	const {
 		mutate: register,
@@ -32,6 +36,13 @@ const Authorization = () => {
 		{
 			onSuccess(data) {
 				localStorage.setItem('token', data.token);
+
+				setIsAuth(true);
+
+				setEmail('');
+				setPassword('');
+
+				navigate('/');
 			},
 		}
 	);
