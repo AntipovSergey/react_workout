@@ -8,14 +8,12 @@ import styles from './Menu.module.scss';
 import { menu } from './menuBase.js';
 
 const Menu = () => {
-	const { isAuth, setIsAuth } = useAuth();
+	const { setIsAuth } = useAuth();
 
 	const handleLogout = () => {
 		localStorage.removeItem('token');
 		setIsAuth(false);
 	};
-
-	console.log(isAuth);
 
 	return (
 		<div className={styles.wrapper}>

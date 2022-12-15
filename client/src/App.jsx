@@ -1,20 +1,30 @@
 import { Routes, Route } from 'react-router-dom';
+import Error404 from './pages/404';
 
-import Authorization from './pages/Authorization/Authorization';
-import Home from './pages/Home/Home';
-import NewWorkout from './pages/NewWorkout/NewWorkout';
+import { useAuth } from './hooks/useAuth';
+
+import { routes } from './routes';
 
 function App() {
+	const { isAuth } = useAuth();
 	return (
 		<div>
 			<Routes>
-				<Route
-					path='/'
-					exact={true}
-					element={<Home title='Exercises for the shoulders' />}
-				/>
-				<Route path='/new-workout' element={<NewWorkout />} />
-				<Route path='/profile' element={<Authorization />} />
+				{routes.map(route => {
+					if (route.auth && !isAuth) {
+						return false;
+					}
+					return (
+						<Route
+							key={route.path}
+							path={route.path}
+							exact={route.exact}
+							element={route.component}
+							title={route.title}
+						/>
+					);
+				})}
+				<Route path='*' element={<Error404 />} />
 			</Routes>
 		</div>
 	);
